@@ -1,0 +1,9 @@
+.weather {
+    position: relative;
+    top: 40px;
+    left: 200px;
+}
+
+body {
+    background-color: aqua;
+}
