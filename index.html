@@ -38,6 +38,7 @@
     <br>
     <br>
 
+    <!-- hides detail when a button is pressed, also a bunch of headers and the 5 day forecast -->
     <div id="w-detail" class="text-center">
         <button onclick="hideandshow()" class="text-center" id="d-button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"/>
@@ -54,6 +55,45 @@
         <h6 class="text-left" id="current-weather"></h6>
         <br>
         <img src="" alt="image" id="pic-id">
+
+        <h3>5 day weather forecast</h3>
+
+        
+        <div id="day1div" class="day1div">
+        <p id="day1feels_like"> Loading...</p>
+        <div class="image"><img src="error.png" class="imgClass" id="img1"></div>
+        <p id="day1min">Loading...</p>
+        <p id="day1max">Loading...</p>
+        </div>
+        
+
+        <div id="day2div" class="day2div">
+        <p id="day2feels_like"> Loading...</p>
+        <div class="image"><img src="error.png" class="imgClass" id="img2"></div>
+        <p id="day2min">Loading...</p>
+        <p id="day2max">Loading...</p>
+        </div>
+        
+        <div id="day3div" class="day3div">
+        <p id="day3feels_like"> Loading...</p>
+        <div class="image"><img src="error.png" class="imgClass" id="img3"></div>
+        <p id="day3min">Loading...</p>
+        <p id="day3max">Loading...</p>
+        </div>
+        
+        <div id="day4div" class="day4div">
+        <p id="day4feels_like"> Loading...</p>
+        <div class="image"><img src="error.png" class="imgClass" id="img4"></div>
+        <p id="day4min">Loading...</p>
+        <p id="day4max">Loading...</p>
+        </div>
+        
+        <div id="day5div" class="day5div">
+        <p id="day5feels_like"> Loading...</p>
+        <div class="image"><img src="error.png" class="imgClass" id="img5"></div>
+        <p id="day5min">Loading...</p>
+        <p id="day5max">Loading...</p>
+        </div>
           </div>
     </div>
 
