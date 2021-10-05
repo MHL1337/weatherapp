@@ -7,3 +7,33 @@
 body {
     background-color: aqua;
 }
+
+.day1div {
+    position: absolute;
+    margin-left: 17%;
+    margin-top: 2%;
+}
+
+.day2div {
+    position: absolute;
+    margin-left: 32%;
+    margin-top: 2%;
+}
+
+.day3div {
+    position: absolute;
+    margin-left: 47%;
+    margin-top: 2%;
+}
+
+.day4div {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 2%;
+}
+
+.day5div {
+    position: absolute;
+    margin-left: 77%;
+    margin-top: 2%;
+}
