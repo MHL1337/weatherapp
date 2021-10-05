@@ -34,6 +34,45 @@ templow.textContent = "Todays lowest tempature: ";
         }
       }
 
+function api5call() // Hämtar dom kommande fem dagarna, när funktionen "callas"
+{
+    const api = "https://api.openweathermap.org/data/2.5/forecast?q=" + input.value + "&appid=42e4f636ae234d064807440d65f977ea";
+    fetch(api)
+    .then ((response) => {
+        return response.json();
+    })
+    .then (data => {
+
+            for (i = 0; i<5; i++)
+            {
+                document.getElementById("day" + (i+1) + "min").innerHTML = "min: " + Number(data.list[i].main.temp_min - 273.15).toFixed(1)+ "°C";
+            }
+
+            for(i = 0; i<5; i++){
+                document.getElementById("day" + (i+1) + "max").innerHTML = "max: " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°C";
+            }
+
+            for(i = 0; i<5; i++){
+                document.getElementById("day" + (i+1) + "feels_like").innerHTML = "temp: " + Number(data.list[i].main.feels_like - 273.15).toFixed(2) + "°C";
+            }
+
+            for(i = 0; i<5; i++){
+                document.getElementById("img" + (i+1)).src = "http://openweathermap.org/img/wn/"+
+                data.list[i].weather[0].icon
+                +".png";
+            }
+
+            for(i = 0; i<5; i++)
+            {
+
+            }
+
+            console.log(data);
+    })
+}
+
+
+
 function apicall() //function som kallas ifrån valfritt ställe i JS.
 {
     const api = "https://api.openweathermap.org/data/2.5/weather?q=" + input.value + "&appid=3c90c120cc3a19909b03d9e4dde97d4d";
@@ -61,8 +100,7 @@ function apicall() //function som kallas ifrån valfritt ställe i JS.
             feelslike.textContent = "Feels like: " + Math.round(feels_like-273) + "°C";
 
 
-            switch (id)
-{
+    switch (id) { //väljer bild baserat på vilket id, hur vädret är.
 
     case 200, 201, 202, 210, 211, 212, 221, 230, 231, 232:
         document.getElementById("pic-id").src="11d.png";
@@ -115,6 +153,7 @@ function apicall() //function som kallas ifrån valfritt ställe i JS.
         })
 }
 
+api5call(input.value = "gävle");
 apicall(input.value = "gävle"); //Hämtar gävle så fort sidan laddas (default skärm)
 
 
